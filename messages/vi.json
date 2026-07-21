@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "slides": [
+      {
+        "tag": "Tập Thông Minh",
+        "title": "Biến Đổi Cơ Thể, Nâng Tầm Cuộc Sống",
+        "description": "Kế hoạch tập luyện cá nhân hóa và theo dõi thời gian thực giúp bạn đạt đến hiệu suất đỉnh cao."
+      },
+      {
+        "tag": "Kiên Trì",
+        "title": "Mỗi Lần Tập Đều Có Ý Nghĩa",
+        "description": "Xây dựng thói quen bền vững với các phương pháp linh hoạt phát triển theo tiến trình của bạn."
+      },
+      {
+        "tag": "Vượt Giới Hạn",
+        "title": "Giải Phóng Tiềm Năng Thật Sự",
+        "description": "Phân tích nâng cao và huấn luyện AI để phá vỡ giới hạn và thiết lập kỷ lục mới."
+      }
+    ],
+    "ctaGetStarted": "Bắt Đầu",
+    "ctaLearnMore": "Tìm Hiểu Thêm",
+    "prevLabel": "Slide trước",
+    "nextLabel": "Slide tiếp",
+    "goToSlide": "Đến slide {number}"
+  },
+  "services": {
+    "sectionTitle": "DỊCH VỤ",
+    "heading": "Chọn Con Đường <span>Biến Đổi</span> Của Bạn",
+    "danceTraining": {
+      "title": "Tập Luyện Khiêu Vũ",
+      "description": "Sự kết hợp giữa khiêu vũ và bài tập aerobics cho trải nghiệm thể dục thú vị nhất. Phù hợp với mọi cấp độ."
+    },
+    "bodybuilding": {
+      "title": "Tập Thể Hình Nữ",
+      "description": "Chương trình tập thể hình chuyên biệt cho phụ nữ, tập trung vào định hình và tăng cường cơ bắp."
+    },
+    "anatomy": {
+      "title": "Giải Phẫu Vận Động",
+      "description": "Đào tạo khoa học về cơ và khớp để thực hiện đúng động tác và ngăn ngừa chấn thương."
+    },
+    "nutrition": {
+      "title": "Dinh Dưỡng Thể Thao",
+      "description": "Chế độ ăn phù hợp với mục tiêu cơ thể của bạn, từ giảm cân đến xây dựng cơ bắp."
+    },
+    "challenges": {
+      "title": "Thách Thức Hướng Đến Kết Quả",
+      "description": "Thách thức VP 72 giờ và FA 48 giờ cho kết quả nhanh chóng và rõ ràng."
+    },
+    "onlineSupport": {
+      "title": "Hỗ Trợ Trực Tuyến",
+      "description": "Theo dõi tiến độ liên tục, chỉnh sửa tư thế và giải đáp thắc mắc của bạn."
+    }
+  },
+  "trainingPlans": {
+    "sectionTitle": "KẾ HOẠCH TẬP LUYỆN",
+    "heading": "Kế Hoạch <span>Dành Riêng Cho Bạn</span>",
+    "cta": "Chọn Kế Hoạch",
+    "faPlan": {
+      "title": "Kế Hoạch FA",
+      "duration": "48 Giờ",
+      "description": "Chương trình cấp tốc 2 ngày để kích hoạt cơ bắp nhanh chóng và đốt cháy mỡ thừa. Phù hợp cho người bận rộn.",
+      "features": ["6 Buổi Tập Hàng Tuần", "Chế Độ Dinh Dưỡng Đơn Giản", "Hỗ Trợ Qua Tin Nhắn"]
+    },
+    "vpPlan": {
+      "badgeLabel": "Phổ Biến Nhất",
+      "title": "Kế Hoạch VP",
+      "duration": "72 Giờ",
+      "description": "Chương trình toàn diện 3 ngày kết hợp khiêu vũ, tập thể hình và giải phẫu. Kết quả tối đa trong thời gian ngắn nhất.",
+      "features": ["6 Buổi Tập Hàng Tuần", "Bài Tập Khiêu Vũ Cá Nhân Hóa", "Chế Độ Dinh Dưỡng Đầy Đủ", "Hỗ Trợ Video", "Bài Học Giải Phẫu Vận Động"]
+    },
+    "prPlan": {
+      "title": "Kế Hoạch Cao Cấp",
+      "duration": "30 Ngày",
+      "description": "Chương trình chuyển đổi toàn diện một tháng với sự hướng dẫn trực tiếp từ Negin. Thay đổi lối sống từ nền tảng.",
+      "features": ["Tất Cả Tính Năng Của VP", "Buổi Trực Tuyến Hàng Tuần", "Chương Trình 30 Ngày Đầy Đủ", "Chỉnh Sửa Tư Thế"]
+    },
+    "schedule": {
+      "title": "Lịch Tập Mẫu Hàng Tuần",
+      "day": "Ngày",
+      "type": "Loại Bài Tập",
+      "sets": "Hiệp",
+      "reps": "Số Lần",
+      "target": "Cơ Mục Tiêu",
+      "rows": [
+        { "day": "Thứ Bảy", "exercise": "Thân Dưới", "sets": "6", "reps": "12-16", "muscle": "Mông & Đùi" },
+        { "day": "Chủ Nhật", "exercise": "Tập Khiêu Vũ", "sets": "4", "reps": "20 phút", "muscle": "Toàn Thân" },
+        { "day": "Thứ Hai", "exercise": "Thân Trên", "sets": "5", "reps": "10-12", "muscle": "Vai & Lưng" },
+        { "day": "Thứ Ba", "exercise": "Cardio + Khiêu Vũ", "sets": "3", "reps": "30 phút", "muscle": "Tim Mạch" },
+        { "day": "Thứ Tư", "exercise": "Thân Dưới", "sets": "6", "reps": "12-16", "muscle": "Bắp Chân & Đùi" },
+        { "day": "Thứ Năm", "exercise": "Tập Khiêu Vũ", "sets": "4", "reps": "25 phút", "muscle": "Mông & Bụng" },
+        { "day": "Thứ Sáu", "exercise": "Nghỉ Ngơi Chủ Động (Giãn Cơ & Yoga)", "isRest": true }
+      ]
+    },
+    "anatomySection": {
+      "sectionTitle": "GIẢI PHẪU VẬN ĐỘNG",
+      "heading": "Hiểu Rõ <span>Cơ Bắp</span>",
+      "description": "Hiểu biết về giải phẫu cơ thể là chìa khóa để thực hiện bài tập đúng cách và ngăn ngừa chấn thương.",
+      "tipTitle": "Lời Khuyên Từ Negin",
+      "tipDescription": "Hệ thống cơ chân và hệ thống xương chân có mối liên hệ chặt chẽ. Để tập bắp chân hiệu quả, trước tiên hãy chuẩn bị cơ đùi với 4 hiệp, sau đó nhắm vào bắp chân với 16-10 lần giảm dần. Không bao giờ squat nặng mà không làm nóng cơ mông.",
+      "muscles": [
+        { "title": "Cơ Mông", "description": "Cơ Gluteus Maximus — cơ mạnh nhất trong cơ thể", "moves": "6 Bài Tập Hiệu Quả", "imageName": "glute.jpg" },
+        { "title": "Cơ Đùi", "description": "Cơ Tứ Đầu & Gân Kheo — động lực chính của chuyển động", "moves": "8 Bài Tập Hiệu Quả", "imageName": "thigh.jpg" },
+        { "title": "Cơ Bắp Chân", "description": "Cơ Gastrocnemius & Soleus — cân bằng và ổn định", "moves": "5 Bài Tập Hiệu Quả", "imageName": "calf.jpg" },
+        { "title": "Cơ Trung Tâm", "description": "Cơ Bụng & Lưng — trung tâm ổn định của cơ thể", "moves": "7 Bài Tập Hiệu Quả", "imageName": "core.jpg" }
+      ]
+    },
+    "results": {
+      "sectionTitle": "KẾT QUẢ",
+      "heading": "Con Số <span>Không Biết Nói Dối</span>",
+      "labels": ["Học Viên Hài Lòng", "Buổi Đã Tổ Chức", "Chương Trình Chuyên Biệt", "Năm Kinh Nghiệm"]
+    },
+    "testimonials": {
+      "sectionTitle": "NHẬN XÉT",
+      "heading": "Họ <span>Nói Gì</span>",
+      "items": [
+        {
+          "text": "Với chương trình VP của Negin, tôi đã giảm 12 kg trong 3 tháng. Các bài tập khiêu vũ vừa thú vị vừa hiệu quả. Nó thực sự đã thay đổi cuộc đời tôi.",
+          "name": "Sara Ahmadi",
+          "program": "Kế Hoạch VP — 3 tháng trước"
+        },
+        {
+          "text": "Bài học giải phẫu của Negin thật tuyệt vời. Cuối cùng tôi đã hiểu tại sao squats của mình sai. Bây giờ tôi tập mà không đau và kết quả tốt hơn nhiều.",
+          "name": "Maryam Rezaei",
+          "program": "Kế Hoạch Cao Cấp — 1 tháng trước"
+        },
+        {
+          "text": "Thử thách 48 giờ FA thật tuyệt vời. Dù làm ca đêm, tôi vẫn có thể theo chương trình. Sự hỗ trợ của Negin thực sự tạo nên khác biệt.",
+          "name": "Niloufar Karimi",
+          "program": "Kế Hoạch FA — 2 tuần trước"
+        }
+      ]
+    }
+  },
+  "cta": {
+    "sectionTitle": "BẮT ĐẦU NGAY",
+    "heading": "Bước Đầu Tiên Hướng Tới <span>Sự Thay Đổi</span>",
+    "description": "Điền vào biểu mẫu bên dưới và chúng tôi sẽ điều chỉnh kế hoạch tập luyện phù hợp với mục tiêu của bạn.",
+    "nameLabel": "Họ và Tên",
+    "namePlaceholder": "Tên của bạn",
+    "phoneLabel": "Số Điện Thoại",
+    "phonePlaceholder": "09121234567",
+    "goalLabel": "Mục Tiêu Của Bạn",
+    "goalOptions": ["Chọn...", "Giảm Cân", "Xây Dựng Cơ Bắp", "Định Hình Cơ Thể", "Tập Khiêu Vũ", "Thể Dục Tổng Quát"],
+    "planLabel": "Chọn Kế Hoạch",
+    "planOptions": ["Chọn Kế Hoạch", "Kế Hoạch FA — 48 Giờ", "Kế Hoạch VP — 72 Giờ", "Kế Hoạch Cao Cấp — 30 Ngày"],
+    "messageLabel": "Chi Tiết Thêm",
+    "messagePlaceholder": "Mức độ thể lực hiện tại, giới hạn thể chất, mục tiêu thời gian...",
+    "submit": "Gửi Yêu Cầu"
+  },
+  "footer": {
+    "brandName": "Negin Safareh",
+    "description": "Huấn luyện viên thể hình và khiêu vũ. Chương trình tập luyện cá nhân hóa với phương pháp khoa học và nghệ thuật. Trực tuyến và trực tiếp.",
+    "socialLabels": ["Instagram", "Telegram", "WhatsApp", "YouTube"],
+    "quickAccess": "Truy Cập Nhanh",
+    "quickLinks": ["Dịch Vụ", "Kế Hoạch", "Giải Phẫu", "Kết Quả", "Liên Hệ"],
+    "quickHrefs": ["#services", "#plans", "#anatomy", "#results", "#contact"],
+    "contactHeading": "Liên Hệ",
+    "phone": "0912-123-4567",
+    "location": "Tehran, Iran",
+    "copyright": "Đã đăng ký bản quyền © 2025 Negin Safareh",
+    "privacy": "Chính Sách Bảo Mật",
+    "terms": "Điều Khoản Sử Dụng"
+  }
+}
