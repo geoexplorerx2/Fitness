@@ -50,12 +50,7 @@ const Footer = () => {
               </p>
               <div className="flex gap-3">
                 {socialIcons.map(({ icon, href }, i) => (
-                  <a
-                    key={i}
-                    href={href}
-                    className={iconBoxClass}
-                    aria-label={socialLabels[i]}
-                  >
+                  <a key={i} href={href} className={iconBoxClass} aria-label={socialLabels[i]} >
                     <FontAwesomeIcon icon={icon} style={{ width: 16, height: 16 }} />
                   </a>
                 ))}
@@ -71,10 +66,7 @@ const Footer = () => {
                   const href = rawHref.startsWith('#') ? rawHref : `/${locale}${rawHref}`
                   return (
                     <li key={i}>
-                      <a
-                        href={href}
-                        className="text-white/50 text-sm hover:text-white transition-colors"
-                      >
+                      <a href={href} className="text-white/50 text-sm hover:text-white transition-colors" >
                         {link}
                       </a>
                     </li>
@@ -88,10 +80,7 @@ const Footer = () => {
               <h4 className="font-bold text-sm mb-4 text-white">{t('contactHeading')}</h4>
               <ul className="space-y-2.5">
                 <li>
-                  <a
-                    href="mailto:info@neginsafareh.ir"
-                    className="text-white/50 text-sm hover:text-white transition-colors"
-                  >
+                  <a href="mailto:info@neginsafareh.ir" className="text-white/50 text-sm hover:text-white transition-colors" >
                     info@neginsafareh.ir
                   </a>
                 </li>

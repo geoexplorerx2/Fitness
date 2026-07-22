@@ -45,11 +45,7 @@ const Services = () => {
         {/* Service cards grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
           {serviceMeta.map(({ key, icon }, i) => (
-            <div
-              key={key}
-              className="feature-card reveal"
-              style={{ '--i': i } as React.CSSProperties}
-            >
+            <div key={key} className="feature-card reveal" style={{ '--i': i } as React.CSSProperties} >
               <div className="feature-icon">
                 <FontAwesomeIcon icon={icon} style={{ width: 22, height: 22 }} />
               </div>

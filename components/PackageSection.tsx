@@ -49,19 +49,11 @@ export default function PackageSection() {
                 {/* Responsive card grid */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
                     {items.map((item, i) => (
-                        <div
-                            key={i}
-                            className={`plan-card reveal flex flex-col ${item.featured ? 'featured' : ''}`}
-                            style={{ '--i': i } as React.CSSProperties}
-                        >
+                        <div key={i} className={`plan-card reveal flex flex-col ${item.featured ? 'featured' : ''}`} style={{ '--i': i } as React.CSSProperties} >
                             {/* Optional image */}
                             {item.image && packageImages[item.image] && (
                                 <div className="rounded-xl overflow-hidden mb-5">
-                                    <Image
-                                        src={packageImages[item.image]}
-                                        alt={item.title}
-                                        className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
-                                    />
+                                    <Image src={packageImages[item.image]} alt={item.title} className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" />
                                 </div>
                             )}
 
@@ -80,21 +72,13 @@ export default function PackageSection() {
                             <ul className="space-y-3 mb-6">
                                 {item.features.map((feat, j) => (
                                     <li key={j} className="flex items-center gap-2 text-sm text-white/80">
-                                        <FontAwesomeIcon
-                                            icon={faCheck}
-                                            className="text-white shrink-0"
-                                            style={{ width: 12, height: 12 }}
-                                        />
+                                        <FontAwesomeIcon icon={faCheck} className="text-white shrink-0" style={{ width: 12, height: 12 }} />
                                         {feat}
                                     </li>
                                 ))}
                             </ul>
 
-                            <a
-                                href="#contact"
-                                className={`w-full py-3 text-sm text-center block mt-auto ${item.featured ? 'btn-glow' : 'btn-outline'
-                                    }`}
-                            >
+                            <a href="#contact" className={`w-full py-3 text-sm text-center block mt-auto ${item.featured ? 'btn-glow' : 'btn-outline' }`} >
                                 {item.cta}
                             </a>
                         </div>
