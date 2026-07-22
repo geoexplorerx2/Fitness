@@ -249,7 +249,9 @@
     "location": "تهران، ایران",
     "copyright": "تمامی حقوق محفوظ است © ۱۴۰۴ نگین صفره",
     "privacy": "حریم خصوصی",
-    "terms": "شرایط استفاده"
+    "terms": "شرایط استفاده",
+    "signin": "ورود",
+    "signup": "ثبت‌نام"
   },
   "packages": {
     "sectionTitle": "محصولات",
@@ -266,7 +268,7 @@
           "پشتیبانی ۲۴/۷"
         ],
         "cta": "خرید",
-        "image": "/images/online-coaching.jpg",
+        "image": "glute",
         "featured": false
       },
       {
@@ -279,7 +281,7 @@
           "دسترسی مادام‌العمر"
         ],
         "cta": "ثبت‌نام",
-        "image": "/images/dance-masterclass.jpg",
+        "image": "core",
         "featured": true
       },
       {
@@ -292,7 +294,7 @@
           "برنامه غذایی ۳۰ روزه"
         ],
         "cta": "دانلود",
-        "image": "/images/ebook.jpg",
+        "image": "thigh",
         "featured": false
       }
     ]

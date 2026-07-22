@@ -52,7 +52,7 @@ export default function Navbar() {
   }, [handleScroll])
 
   // Smooth-scroll to an anchor, then close the mobile menu
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLElement>, href: string) => {
     e.preventDefault()
     const target = document.querySelector(href)
     if (target) {
@@ -61,7 +61,7 @@ export default function Navbar() {
     setMenuOpen(false)
   }
 
-  const handleMobileNavClick = (href: string) => {
+  const handleMobileNavClick = () => {
     setMenuOpen(false)
   }
 
@@ -81,14 +81,15 @@ export default function Navbar() {
 
             if (isAnchor) {
               return (
-                <a
+                <Link
                   key={i}
                   href={href}
+                  scroll={false}
                   onClick={(e) => handleSmoothScroll(e, href)}
                   className="nav-link text-sm"
                 >
                   {link}
-                </a>
+                </Link>
               )
             }
 
@@ -124,24 +125,24 @@ export default function Navbar() {
 
           {/* Auth buttons */}
           <div className="hidden sm:flex items-center border border-white/10 rounded-xl overflow-hidden">
-            <a
-              href="#"
-              className="px-4 py-2 text-sm font-medium text-white/50 hover:text-white hover:bg-white/5 transition-all"
+            <Link
+              href={`/${locale}/accout/signin`}
+              className="px-4 py-2 text-sm font-medium text-white/90 hover:text-white hover:bg-white/5 transition-all"
             >
-              ورود
-            </a>
+              {t('signin')}
+            </Link>
             <span className="w-px h-5 bg-white/10" />
-            <a
-              href="#"
-              className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-accent to-accent-deep"
+            <Link
+              href={`/${locale}/accout/signup`}
+              className="px-4 py-2 text-sm font-medium hover:text-white hover:bg-white/5 transition-all text-white/90 bg-gradient-to-r from-accent to-accent-deep"
             >
-              ثبت‌نام
-            </a>
+              {t('signup')}
+            </Link>
           </div>
 
           {/* Brand logo */}
-          <a
-            href="#"
+          <Link
+            href="/"
             className="font-bold text-lg sm:text-xl tracking-tight flex items-center gap-2 shrink-0"
           >
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-bl from-accent to-accent-deep flex items-center justify-center">
@@ -152,7 +153,7 @@ export default function Navbar() {
               />
             </div>
             <span className="text-white truncate">{t('brandName')}</span>
-          </a>
+          </Link>
 
           {/* Hamburger — mobile only */}
           <button
@@ -196,14 +197,15 @@ export default function Navbar() {
 
               if (isAnchor) {
                 return (
-                  <a
+                  <Link
                     key={i}
                     href={href}
+                    scroll={false}
                     onClick={(e) => handleSmoothScroll(e, href)}
                     className="text-xl sm:text-2xl font-bold text-white/80 hover:text-white transition-colors"
                   >
                     {link}
-                  </a>
+                  </Link>
                 )
               }
 
@@ -211,7 +213,7 @@ export default function Navbar() {
                 <Link
                   key={i}
                   href={href}
-                  onClick={() => handleMobileNavClick(href)}
+                  onClick={handleMobileNavClick}
                   className="text-xl sm:text-2xl font-bold text-white/80 hover:text-white transition-colors"
                 >
                   {link}
@@ -220,20 +222,22 @@ export default function Navbar() {
             })}
 
             <div className="flex items-center gap-2 sm:gap-3 pt-4 border-t border-white/10">
-              <a
-                href="#"
+              <Link
+                href={`/${locale}/accout/signin`}
+                onClick={handleMobileNavClick}
                 className="px-6 py-3 rounded-xl text-base font-medium text-white/50 border border-white/10
                            hover:text-white hover:bg-white/5 transition-all"
               >
-                ورود
-              </a>
-              <a
-                href="#"
+                {t('signin')}
+              </Link>
+              <Link
+                href={`/${locale}/accout/signup`}
+                onClick={handleMobileNavClick}
                 className="px-6 py-3 rounded-xl text-base font-medium text-white
                            bg-gradient-to-r from-accent to-accent-deep"
               >
-                ثبت‌نام
-              </a>
+                {t('signup')}
+              </Link>
             </div>
           </motion.div>
         )}

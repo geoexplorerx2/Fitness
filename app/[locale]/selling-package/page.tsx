@@ -2,7 +2,6 @@ import React from 'react'
 import { setRequestLocale } from 'next-intl/server'
 import { routing } from '../../../i18n/routing'
 import Navbar from '@/components/Navbar'
-import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PackageSection from '@/components/PackageSection'
 import HeroBlobs from '@/components/HeroBlobs'
@@ -15,7 +14,7 @@ export default async function SellingPackage({ params }: { params: Promise<{ loc
     setRequestLocale(locale)
 
     return (
-        <main className="w-full min-h-screen relative">
+        <main className="w-full min-h-screen overflow-hidden relative">
             <Navbar />
             <HeroBlobs/>
             <PackageSection />
