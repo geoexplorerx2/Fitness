@@ -126,14 +126,14 @@ export default function Navbar() {
           <div className="hidden sm:flex items-center border border-white/10 rounded-xl overflow-hidden">
             <Link
               href={`/${locale}/accout/signin`}
-              className="px-4 py-2 text-sm font-medium text-white/50 hover:text-white hover:bg-white/5 transition-all"
+              className="px-4 py-2 text-sm font-medium text-white/90 hover:text-white hover:bg-white/5 transition-all"
             >
               ورود
             </Link>
             <span className="w-px h-5 bg-white/10" />
             <Link
               href={`/${locale}/accout/signup`}
-              className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-accent to-accent-deep"
+              className="px-4 py-2 text-sm font-medium hover:text-white hover:bg-white/5 transition-all text-white/90 bg-gradient-to-r from-accent to-accent-deep"
             >
               ثبت‌نام
             </Link>
