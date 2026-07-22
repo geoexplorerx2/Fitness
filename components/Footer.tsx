@@ -4,7 +4,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faTelegram, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
 // Static social icon metadata — keeps render function clean
@@ -21,6 +21,7 @@ const iconBoxClass =
 
 const Footer = () => {
   const t = useTranslations('footer')
+  const locale = useLocale()
 
   const socialLabels = t.raw('socialLabels') as string[]
   const quickLinks = t.raw('quickLinks') as string[]
@@ -65,16 +66,20 @@ const Footer = () => {
             <div>
               <h4 className="font-bold text-sm mb-4 text-white">{t('quickAccess')}</h4>
               <ul className="space-y-2.5">
-                {quickLinks.map((link, i) => (
-                  <li key={i}>
-                    <a
-                      href={quickHrefs[i]}
-                      className="text-white/50 text-sm hover:text-white transition-colors"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {quickLinks.map((link, i) => {
+                  const rawHref = quickHrefs[i]
+                  const href = rawHref.startsWith('#') ? rawHref : `/${locale}${rawHref}`
+                  return (
+                    <li key={i}>
+                      <a
+                        href={href}
+                        className="text-white/50 text-sm hover:text-white transition-colors"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  )
+                })}
               </ul>
             </div>
 

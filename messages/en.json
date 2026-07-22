@@ -278,7 +278,7 @@
           "24/7 chat support"
         ],
         "cta": "Buy Now",
-        "image": "/images/online-coaching.jpg",
+        "image": "glute",
         "featured": false
       },
       {
@@ -291,7 +291,7 @@
           "Lifetime access"
         ],
         "cta": "Enroll Now",
-        "image": "/images/dance-masterclass.jpg",
+        "image": "core",
         "featured": true
       },
       {
@@ -304,7 +304,7 @@
           "30-day meal planner"
         ],
         "cta": "Download",
-        "image": "/images/ebook.jpg",
+        "image": "thigh",
         "featured": false
       }
     ]

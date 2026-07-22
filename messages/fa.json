@@ -266,7 +266,7 @@
           "پشتیبانی ۲۴/۷"
         ],
         "cta": "خرید",
-        "image": "/images/online-coaching.jpg",
+        "image": "glute",
         "featured": false
       },
       {
@@ -279,7 +279,7 @@
           "دسترسی مادام‌العمر"
         ],
         "cta": "ثبت‌نام",
-        "image": "/images/dance-masterclass.jpg",
+        "image": "core",
         "featured": true
       },
       {
@@ -292,7 +292,7 @@
           "برنامه غذایی ۳۰ روزه"
         ],
         "cta": "دانلود",
-        "image": "/images/ebook.jpg",
+        "image": "thigh",
         "featured": false
       }
     ]

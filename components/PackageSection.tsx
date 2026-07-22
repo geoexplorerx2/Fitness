@@ -3,6 +3,18 @@
 import { useTranslations } from 'next-intl'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import Image from 'next/image'
+import type { StaticImageData } from 'next/image'
+
+import gluteImg from '@/assets/img/jpg/glute.jpg'
+import thighImg from '@/assets/img/jpg/thigh.jpg'
+import coreImg from '@/assets/img/jpg/core.jpg'
+
+const packageImages: Record<string, StaticImageData> = {
+  glute: gluteImg,
+  thigh: thighImg,
+  core: coreImg,
+}
 
 const inputClass =
     'w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white ' +
@@ -48,10 +60,10 @@ export default function PackageSection() {
                             style={{ '--i': i } as React.CSSProperties}
                         >
                             {/* Optional image */}
-                            {item.image && (
+                            {item.image && packageImages[item.image] && (
                                 <div className="rounded-xl overflow-hidden mb-5">
-                                    <img
-                                        src={item.image}
+                                    <Image
+                                        src={packageImages[item.image]}
                                         alt={item.title}
                                         className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
                                     />
