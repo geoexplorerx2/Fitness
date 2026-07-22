@@ -253,6 +253,23 @@
     "signin": "ورود",
     "signup": "ثبت‌نام"
   },
+  "auth": {
+    "welcomeBack": "خوش آمدید",
+    "subtitle": "برای ادامه مسیر تناسب اندام خود وارد شوید",
+    "emailLabel": "ایمیل",
+    "emailPlaceholder": "you@example.com",
+    "passwordLabel": "رمز عبور",
+    "passwordPlaceholder": "••••••••",
+    "rememberMe": "مرا به خاطر بسپار",
+    "forgotPassword": "رمز عبور را فراموش کرده‌اید؟",
+    "signIn": "ورود",
+    "noAccount": "حساب کاربری ندارید؟",
+    "createOne": "ثبت‌نام کنید",
+    "emailRequired": "ایمیل الزامی است",
+    "emailInvalid": "لطفاً یک ایمیل معتبر وارد کنید",
+    "passwordRequired": "رمز عبور الزامی است",
+    "passwordMin": "رمز عبور باید حداقل ۶ کاراکتر باشد"
+  },
   "packages": {
     "sectionTitle": "محصولات",
     "heading": "بسته <span>مورد نظر</span> خود را انتخاب کنید",
