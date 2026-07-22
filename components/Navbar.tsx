@@ -124,19 +124,19 @@ export default function Navbar() {
 
           {/* Auth buttons */}
           <div className="hidden sm:flex items-center border border-white/10 rounded-xl overflow-hidden">
-            <a
-              href="#"
+            <Link
+              href={`/${locale}/accout/signin`}
               className="px-4 py-2 text-sm font-medium text-white/50 hover:text-white hover:bg-white/5 transition-all"
             >
               ورود
-            </a>
+            </Link>
             <span className="w-px h-5 bg-white/10" />
-            <a
-              href="#"
+            <Link
+              href={`/${locale}/accout/signup`}
               className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-accent to-accent-deep"
             >
               ثبت‌نام
-            </a>
+            </Link>
           </div>
 
           {/* Brand logo */}
@@ -220,20 +220,22 @@ export default function Navbar() {
             })}
 
             <div className="flex items-center gap-2 sm:gap-3 pt-4 border-t border-white/10">
-              <a
-                href="#"
+              <Link
+                href={`/${locale}/accout/signin`}
+                onClick={handleMobileNavClick}
                 className="px-6 py-3 rounded-xl text-base font-medium text-white/50 border border-white/10
                            hover:text-white hover:bg-white/5 transition-all"
               >
                 ورود
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href={`/${locale}/accout/signup`}
+                onClick={handleMobileNavClick}
                 className="px-6 py-3 rounded-xl text-base font-medium text-white
                            bg-gradient-to-r from-accent to-accent-deep"
               >
                 ثبت‌نام
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}
