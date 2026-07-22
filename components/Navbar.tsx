@@ -141,7 +141,7 @@ export default function Navbar() {
 
           {/* Brand logo */}
           <a
-            href="#"
+            href="/"
             className="font-bold text-lg sm:text-xl tracking-tight flex items-center gap-2 shrink-0"
           >
             <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-bl from-accent to-accent-deep flex items-center justify-center">
