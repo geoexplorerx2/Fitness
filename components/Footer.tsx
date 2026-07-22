@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram, faTelegram, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { useTranslations, useLocale } from 'next-intl'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
 // Static social icon metadata — keeps render function clean
@@ -22,10 +24,22 @@ const iconBoxClass =
 const Footer = () => {
   const t = useTranslations('footer')
   const locale = useLocale()
+  const pathname = usePathname()
 
   const socialLabels = t.raw('socialLabels') as string[]
   const quickLinks = t.raw('quickLinks') as string[]
   const quickHrefs = t.raw('quickHrefs') as string[]
+
+  const homePath = `/${locale}`
+  const onHomePage = pathname === homePath || pathname === `${homePath}/`
+
+  const handleAnchorClick = (e: React.MouseEvent, hash: string) => {
+    if (onHomePage) {
+      e.preventDefault()
+      const target = document.querySelector(hash)
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
 
   return (
     <footer className="relative text-white" dir="rtl">
@@ -63,12 +77,18 @@ const Footer = () => {
               <ul className="space-y-2.5">
                 {quickLinks.map((link, i) => {
                   const rawHref = quickHrefs[i]
-                  const href = rawHref.startsWith('#') ? rawHref : `/${locale}${rawHref}`
+                  const isAnchor = rawHref.startsWith('#')
+                  const href = isAnchor ? `${homePath}${rawHref}` : `/${locale}${rawHref}`
                   return (
                     <li key={i}>
-                      <a href={href} className="text-white/50 text-sm hover:text-white transition-colors" >
+                      <Link
+                        href={href}
+                        scroll={!(isAnchor && onHomePage)}
+                        onClick={isAnchor ? (e) => handleAnchorClick(e, rawHref) : undefined}
+                        className="text-white/50 text-sm hover:text-white transition-colors"
+                      >
                         {link}
-                      </a>
+                      </Link>
                     </li>
                   )
                 })}

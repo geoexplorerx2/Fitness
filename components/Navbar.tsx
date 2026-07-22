@@ -12,6 +12,7 @@ import {
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { useTranslations, useLocale } from 'next-intl'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
@@ -32,6 +33,7 @@ const menuVariants = {
 export default function Navbar() {
   const t = useTranslations('footer')
   const locale = useLocale()
+  const pathname = usePathname()
   const isRtl = locale === 'fa'
 
   const [scrolled, setScrolled] = useState(false)
@@ -51,12 +53,16 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
 
-  // Smooth-scroll to an anchor, then close the mobile menu
-  const handleSmoothScroll = (e: React.MouseEvent<HTMLElement>, href: string) => {
-    e.preventDefault()
-    const target = document.querySelector(href)
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const homePath = `/${locale}`
+  const onHomePage = pathname === homePath || pathname === `${homePath}/`
+
+  const handleAnchorClick = (e: React.MouseEvent, hash: string) => {
+    if (onHomePage) {
+      e.preventDefault()
+      const target = document.querySelector(hash)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
     }
     setMenuOpen(false)
   }
@@ -73,18 +79,16 @@ export default function Navbar() {
           {navLinks.map((link, i) => {
             const rawHref = navHrefs[i]
             const isAnchor = rawHref.startsWith('#')
-            const href = isAnchor ? rawHref : `/${locale}${rawHref}`
-
-            if (isAnchor) {
-              return (
-                <Link key={i} href={href} scroll={false} onClick={(e) => handleSmoothScroll(e, href)} className="nav-link text-sm" >
-                  {link}
-                </Link>
-              )
-            }
+            const href = isAnchor ? `${homePath}${rawHref}` : `/${locale}${rawHref}`
 
             return (
-              <Link key={i} href={href} className="nav-link text-sm" >
+              <Link
+                key={i}
+                href={href}
+                scroll={!(isAnchor && onHomePage)}
+                onClick={isAnchor ? (e) => handleAnchorClick(e, rawHref) : undefined}
+                className="nav-link text-sm"
+              >
                 {link}
               </Link>
             )
@@ -139,18 +143,16 @@ export default function Navbar() {
             {navLinks.map((link, i) => {
               const rawHref = navHrefs[i]
               const isAnchor = rawHref.startsWith('#')
-              const href = isAnchor ? rawHref : `/${locale}${rawHref}`
-
-              if (isAnchor) {
-                return (
-                  <Link key={i} href={href} scroll={false} onClick={(e) => handleSmoothScroll(e, href)} className="text-xl sm:text-2xl font-bold text-white/80 hover:text-white transition-colors" >
-                    {link}
-                  </Link>
-                )
-              }
+              const href = isAnchor ? `${homePath}${rawHref}` : `/${locale}${rawHref}`
 
               return (
-                <Link key={i} href={href} onClick={handleMobileNavClick} className="text-xl sm:text-2xl font-bold text-white/80 hover:text-white transition-colors" >
+                <Link
+                  key={i}
+                  href={href}
+                  scroll={!(isAnchor && onHomePage)}
+                  onClick={isAnchor ? (e) => { handleAnchorClick(e, rawHref) } : handleMobileNavClick}
+                  className="text-xl sm:text-2xl font-bold text-white/80 hover:text-white transition-colors"
+                >
                   {link}
                 </Link>
               )
