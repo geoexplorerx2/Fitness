@@ -261,7 +261,9 @@
     "location": "Tehran, Iran",
     "copyright": "All rights reserved © 2025 Negin Safareh",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Use"
+    "terms": "Terms of Use",
+    "signin": "Sign In",
+    "signup": "Sign Up"
   },
   "packages": {
     "sectionTitle": "PRODUCTS",
