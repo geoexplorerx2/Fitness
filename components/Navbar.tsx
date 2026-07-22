@@ -11,6 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { useTranslations, useLocale } from 'next-intl'
+import Link from 'next/link'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
@@ -60,6 +61,10 @@ export default function Navbar() {
     setMenuOpen(false)
   }
 
+  const handleMobileNavClick = (href: string) => {
+    setMenuOpen(false)
+  }
+
   return (
     <nav
       className={`nav-glass fixed top-0 right-0 left-0 w-full z-50 ${scrolled ? 'scrolled' : ''}`}
@@ -69,16 +74,34 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto h-16 sm:h-20 px-4 sm:px-6 flex items-center justify-between">
         {/* Desktop nav links */}
         <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link, i) => (
-            <a
-              key={i}
-              href={navHrefs[i]}
-              onClick={(e) => handleSmoothScroll(e, navHrefs[i])}
-              className="nav-link text-sm"
-            >
-              {link}
-            </a>
-          ))}
+          {navLinks.map((link, i) => {
+            const rawHref = navHrefs[i]
+            const isAnchor = rawHref.startsWith('#')
+            const href = isAnchor ? rawHref : `/${locale}${rawHref}`
+
+            if (isAnchor) {
+              return (
+                <a
+                  key={i}
+                  href={href}
+                  onClick={(e) => handleSmoothScroll(e, href)}
+                  className="nav-link text-sm"
+                >
+                  {link}
+                </a>
+              )
+            }
+
+            return (
+              <Link
+                key={i}
+                href={href}
+                className="nav-link text-sm"
+              >
+                {link}
+              </Link>
+            )
+          })}
         </div>
 
         {/* Right section: social icons, auth buttons, brand, hamburger */}
@@ -166,16 +189,35 @@ export default function Navbar() {
               <FontAwesomeIcon icon={faXmark} style={{ width: 26, height: 26 }} />
             </button>
 
-            {navLinks.map((link, i) => (
-              <a
-                key={i}
-                href={navHrefs[i]}
-                onClick={(e) => handleSmoothScroll(e, navHrefs[i])}
-                className="text-xl sm:text-2xl font-bold text-white/80 hover:text-white transition-colors"
-              >
-                {link}
-              </a>
-            ))}
+            {navLinks.map((link, i) => {
+              const rawHref = navHrefs[i]
+              const isAnchor = rawHref.startsWith('#')
+              const href = isAnchor ? rawHref : `/${locale}${rawHref}`
+
+              if (isAnchor) {
+                return (
+                  <a
+                    key={i}
+                    href={href}
+                    onClick={(e) => handleSmoothScroll(e, href)}
+                    className="text-xl sm:text-2xl font-bold text-white/80 hover:text-white transition-colors"
+                  >
+                    {link}
+                  </a>
+                )
+              }
+
+              return (
+                <Link
+                  key={i}
+                  href={href}
+                  onClick={() => handleMobileNavClick(href)}
+                  className="text-xl sm:text-2xl font-bold text-white/80 hover:text-white transition-colors"
+                >
+                  {link}
+                </Link>
+              )
+            })}
 
             <div className="flex items-center gap-2 sm:gap-3 pt-4 border-t border-white/10">
               <a
