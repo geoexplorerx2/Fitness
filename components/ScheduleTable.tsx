@@ -65,19 +65,12 @@ export default function ScheduleTable({ title, headers, rows }: ScheduleTablePro
       <div className="lg:hidden grid gap-2 sm:gap-3">
         {rows.map((row, i) =>
           row.isRest ? (
-            <div
-              key={i}
-              className="bg-white/[0.03] border border-white/10 rounded-2xl p-4 sm:p-5
-                         flex items-center justify-between"
-            >
+            <div key={i} className="bg-white/[0.03] border border-white/10 rounded-2xl p-4 sm:p-5 flex items-center justify-between" >
               <span className="font-bold text-white/50">{row.day}</span>
               <span className="text-accent-light font-bold">{row.exercise}</span>
             </div>
           ) : (
-            <div
-              key={i}
-              className="bg-white/[0.03] border border-white/10 rounded-2xl p-4 sm:p-5 space-y-3"
-            >
+            <div key={i} className="bg-white/[0.03] border border-white/10 rounded-2xl p-4 sm:p-5 space-y-3" >
               <div className="flex items-center justify-between">
                 <span className="font-bold text-accent-light">{row.day}</span>
                 <span className="text-xs text-white/40 bg-white/5 px-2.5 py-1 rounded-full">

@@ -75,28 +75,12 @@ const TrainingPlans = () => {
       {/* ──────────────── Training Plans section ──────────────── */}
       <section id="plans" className="py-24 md:py-32 relative text-white" dir="rtl">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            sectionTitle={t('sectionTitle')}
-            heading={t.rich('heading', {
-              span: (chunks) => <span className="gradient-text">{chunks}</span>,
-            })}
-          />
+          <SectionHeading sectionTitle={t('sectionTitle')} heading={t.rich('heading', { span: (chunks) => <span className="gradient-text">{chunks}</span>, })} />
 
           {/* Plan cards grid */}
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {planConfigs.map(({ label, key, featured }) => (
-              <PlanCard
-                key={key}
-                label={label}
-                title={t(`${key}.title`)}
-                duration={t(`${key}.duration`)}
-                description={t(`${key}.description`)}
-                features={t.raw(`${key}.features`) as string[]}
-                cta={t('cta')}
-                featured={featured}
-                badgeLabel={featured ? t(`${key}.badgeLabel`) : undefined}
-                index={planConfigs.findIndex((p) => p.key === key)}
-              />
+              <PlanCard key={key} label={label} title={t(`${key}.title`)} duration={t(`${key}.duration`)} description={t(`${key}.description`)} features={t.raw(`${key}.features`) as string[]} cta={t('cta')} featured={featured} badgeLabel={featured ? t(`${key}.badgeLabel`) : undefined} index={planConfigs.findIndex((p) => p.key === key)} />
             ))}
           </div>
 
@@ -106,19 +90,9 @@ const TrainingPlans = () => {
       </section>
 
       {/* ──────────────── Movement Anatomy section ──────────────── */}
-      <section
-        id="anatomy"
-        className="py-24 md:py-32 relative text-white"
-        dir="rtl"
-        style={{ backgroundColor: 'var(--surface)' }}
-      >
+      <section id="anatomy" className="py-24 md:py-32 relative text-white" dir="rtl" style={{ backgroundColor: 'var(--surface)' }} >
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            sectionTitle={t('anatomySection.sectionTitle')}
-            heading={t.rich('anatomySection.heading', {
-              span: (chunks) => <span className="gradient-text">{chunks}</span>,
-            })}
-          />
+          <SectionHeading sectionTitle={t('anatomySection.sectionTitle')} heading={t.rich('anatomySection.heading', { span: (chunks) => <span className="gradient-text">{chunks}</span>, })} />
           <p className="text-white/60 mt-4 text-center -mt-12 mb-16 reveal">
             {t('anatomySection.description')}
           </p>
@@ -126,18 +100,9 @@ const TrainingPlans = () => {
           {/* Muscle cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
             {muscles.map((muscle, i) => (
-              <div
-                key={i}
-                className="anatomy-card reveal"
-                style={{ '--i': i } as React.CSSProperties}
-              >
+              <div key={i} className="anatomy-card reveal" style={{ '--i': i } as React.CSSProperties} >
                 <div className="overflow-hidden">
-                  <Image
-                    src={muscleImages[muscle.imageName]}
-                    alt={muscle.title}
-                    width={400}
-                    height={300}
-                  />
+                  <Image src={muscleImages[muscle.imageName]} alt={muscle.title} width={400} height={300} />
                 </div>
                 <div className="p-5">
                   <h4 className="font-bold text-lg mb-1 text-white">{muscle.title}</h4>
@@ -152,14 +117,8 @@ const TrainingPlans = () => {
           </div>
 
           {/* Trainer tip callout */}
-          <div
-            className="mt-12 bg-white/5 border border-white/10 rounded-2xl p-5 md:p-8
-                        flex flex-col md:flex-row items-start gap-4 md:gap-6 reveal"
-          >
-            <div
-              className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center
-                          text-accent-light text-2xl shrink-0"
-            >
+          <div className="mt-12 bg-white/5 border border-white/10 rounded-2xl p-5 md:p-8 flex flex-col md:flex-row items-start gap-4 md:gap-6 reveal" >
+            <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent-light text-2xl shrink-0" >
               <FontAwesomeIcon icon={faLightbulb} style={{ width: 18, height: 18 }} />
             </div>
             <div>
@@ -171,19 +130,10 @@ const TrainingPlans = () => {
       </section>
 
       {/* ──────────────── Results / Stats section ──────────────── */}
-      <section
-        id="results"
-        className="py-24 md:py-32 relative overflow-hidden text-white"
-        dir="rtl"
-      >
+      <section id="results" className="py-24 md:py-32 relative overflow-hidden text-white" dir="rtl" >
         <div className="absolute inset-0 border-y border-white/10" />
         <div className="max-w-7xl mx-auto px-6 relative">
-          <SectionHeading
-            sectionTitle={t('results.sectionTitle')}
-            heading={t.rich('results.heading', {
-              span: (chunks) => <span className="gradient-text">{chunks}</span>,
-            })}
-          />
+          <SectionHeading sectionTitle={t('results.sectionTitle')} heading={t.rich('results.heading', { span: (chunks) => <span className="gradient-text">{chunks}</span>, })} />
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 stagger-children">
             {resultTargets.map((target, i) => (
@@ -201,20 +151,11 @@ const TrainingPlans = () => {
       {/* ──────────────── Testimonials section ──────────────── */}
       <section className="py-24 md:py-32 relative text-white" dir="rtl">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            sectionTitle={t('testimonials.sectionTitle')}
-            heading={t.rich('testimonials.heading', {
-              span: (chunks) => <span className="gradient-text">{chunks}</span>,
-            })}
-          />
+          <SectionHeading sectionTitle={t('testimonials.sectionTitle')} heading={t.rich('testimonials.heading', { span: (chunks) => <span className="gradient-text">{chunks}</span>, })} />
 
           <div className="grid md:grid-cols-3 gap-6 stagger-children">
             {testimonials.map((item, i) => (
-              <div
-                key={i}
-                className="testimonial-card reveal"
-                style={{ '--i': i } as React.CSSProperties}
-              >
+              <div key={i} className="testimonial-card reveal" style={{ '--i': i } as React.CSSProperties} >
                 {/* 5-star rating */}
                 <div className="text-accent-light text-sm mb-4">
                   {[...Array(5)].map((_, j) => (
@@ -223,13 +164,7 @@ const TrainingPlans = () => {
                 </div>
                 <p className="text-white/80 leading-relaxed mb-6 text-sm">{item.text}</p>
                 <div className="flex items-center gap-3">
-                  <Image
-                    src={testimonialImages[i]}
-                    alt={item.name}
-                    width={40}
-                    height={40}
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
+                  <Image src={testimonialImages[i]} alt={item.name} width={40} height={40} className="w-10 h-10 rounded-full object-cover" />
                   <div>
                     <div className="font-bold text-sm text-white">{item.name}</div>
                     <div className="text-white/50 text-xs">{item.program}</div>

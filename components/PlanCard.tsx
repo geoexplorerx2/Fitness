@@ -36,17 +36,10 @@ export default function PlanCard({
   index,
 }: PlanCardProps) {
   return (
-    <div
-      className={`plan-card reveal flex flex-col ${featured ? 'featured' : ''}`}
-      style={{ '--i': index } as React.CSSProperties}
-    >
+    <div className={`plan-card reveal flex flex-col ${featured ? 'featured' : ''}`} style={{ '--i': index } as React.CSSProperties} >
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div
-            className={`w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-sm ${
-              featured ? 'bg-white/20' : 'bg-white/10'
-            }`}
-          >
+          <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-sm ${ featured ? 'bg-white/20' : 'bg-white/10' }`} >
             {label}
           </div>
           <div>
@@ -72,12 +65,7 @@ export default function PlanCard({
         ))}
       </ul>
 
-      <a
-        href="#contact"
-        className={`w-full py-3 text-sm text-center block mt-auto ${
-          featured ? 'btn-glow' : 'btn-outline'
-        }`}
-      >
+      <a href="#contact" className={`w-full py-3 text-sm text-center block mt-auto ${ featured ? 'btn-glow' : 'btn-outline' }`} >
         {cta}
       </a>
     </div>

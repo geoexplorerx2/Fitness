@@ -78,10 +78,7 @@ const Header = () => {
   const gradient = gradients[page]
 
   return (
-    <header
-      className="relative min-h-screen flex items-center overflow-hidden grid-pattern"
-      id="hero"
-    >
+    <header className="relative min-h-screen flex items-center overflow-hidden grid-pattern" id="hero" >
       {/* Decorative blurred background blobs */}
       <HeroBlobs />
 
@@ -89,20 +86,7 @@ const Header = () => {
       <canvas id="particles-canvas" />
 
       {isHomePage && (
-        <HomeHeroContent
-          slide={slide}
-          gradient={gradient}
-          isRtl={isRtl}
-          direction={direction}
-          page={page}
-          slides={slides}
-          t={t}
-          paginate={paginate}
-          setPage={setPage}
-          setIsPaused={setIsPaused}
-          isPaused={isPaused}
-          slideVariants={slideVariants}
-        />
+        <HomeHeroContent slide={slide} gradient={gradient} isRtl={isRtl} direction={direction} page={page} slides={slides} t={t} paginate={paginate} setPage={setPage} setIsPaused={setIsPaused} isPaused={isPaused} slideVariants={slideVariants} />
       )}
     </header>
   )

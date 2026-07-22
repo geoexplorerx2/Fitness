@@ -48,11 +48,7 @@ const CTA = () => {
   }
 
   return (
-    <section
-      id="contact"
-      className="py-24 md:py-32 relative overflow-hidden text-white"
-      dir="rtl"
-    >
+    <section id="contact" className="py-24 md:py-32 relative overflow-hidden text-white" dir="rtl" >
       {/* Background glow decoration */}
       <div className="cta-glow" style={{ top: '-200px', right: '-200px' }} />
       <div className="cta-glow" style={{ bottom: '-200px', left: '-200px' }} />
@@ -78,27 +74,13 @@ const CTA = () => {
                 <label className="text-sm text-white/70 mb-1.5 block font-medium" htmlFor="name">
                   {t('nameLabel')}
                 </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder={t('namePlaceholder')}
-                  required
-                  className={inputClass}
-                />
+                <input type="text" id="name" name="name" placeholder={t('namePlaceholder')} required className={inputClass} />
               </div>
               <div>
                 <label className="text-sm text-white/70 mb-1.5 block font-medium" htmlFor="phone">
                   {t('phoneLabel')}
                 </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder={t('phonePlaceholder')}
-                  required
-                  className={inputClass}
-                />
+                <input type="tel" id="phone" name="phone" placeholder={t('phonePlaceholder')} required className={inputClass} />
               </div>
             </div>
 
@@ -107,18 +89,7 @@ const CTA = () => {
               <label className="text-sm text-white/70 mb-1.5 block font-medium" htmlFor="goal">
                 {t('goalLabel')}
               </label>
-              <select
-                id="goal"
-                name="goal"
-                defaultValue=""
-                required
-                className={`${inputClass} appearance-none`}
-                style={{
-                  backgroundImage: `url("data:image/svg+xml;utf8,${selectIconSvg}")`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'left 1rem center',
-                }}
-              >
+              <select id="goal" name="goal" defaultValue="" required className={`${inputClass} appearance-none`} style={{ backgroundImage: `url("data:image/svg+xml;utf8,${selectIconSvg}")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'left 1rem center', }} >
                 {goalOptions.map((opt, i) => (
                   <option key={i} className="text-black" value={i === 0 ? '' : opt} disabled={i === 0}>
                     {opt}
@@ -132,18 +103,7 @@ const CTA = () => {
               <label className="text-sm text-white/70 mb-1.5 block font-medium" htmlFor="plan">
                 {t('planLabel')}
               </label>
-              <select
-                id="plan"
-                name="plan"
-                defaultValue=""
-                required
-                className={`${inputClass} appearance-none`}
-                style={{
-                  backgroundImage: `url("data:image/svg+xml;utf8,${selectIconSvg}")`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'left 1rem center',
-                }}
-              >
+              <select id="plan" name="plan" defaultValue="" required className={`${inputClass} appearance-none`} style={{ backgroundImage: `url("data:image/svg+xml;utf8,${selectIconSvg}")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'left 1rem center', }} >
                 {planOptions.map((opt, i) => (
                   <option key={i} className="text-black" value={i === 0 ? '' : opt} disabled={i === 0}>
                     {opt}
@@ -157,21 +117,11 @@ const CTA = () => {
               <label className="text-sm text-white/70 mb-1.5 block font-medium" htmlFor="message">
                 {t('messageLabel')}
               </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={3}
-                placeholder={t('messagePlaceholder')}
-                className={`${inputClass} resize-none`}
-              />
+              <textarea id="message" name="message" rows={3} placeholder={t('messagePlaceholder')} className={`${inputClass} resize-none`} />
             </div>
 
             {/* Submit button */}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="btn-glow w-full py-4 text-base inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60"
-            >
+            <button type="submit" disabled={isSubmitting} className="btn-glow w-full py-4 text-base inline-flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60" >
               {isSubmitting ? (
                 <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
               ) : (
