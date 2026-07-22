@@ -15,7 +15,7 @@ export default async function SellingPackage({ params }: { params: Promise<{ loc
     setRequestLocale(locale)
 
     return (
-        <main className="w-full min-h-screen relative">
+        <main className="w-full min-h-screen overflow-hidden relative">
             <Navbar />
             <HeroBlobs/>
             <PackageSection />
