@@ -66,13 +66,24 @@
       "title": "VP Plan",
       "duration": "72 Hours",
       "description": "A comprehensive 3-day program combining dance, bodybuilding and anatomy. Maximum results in minimum time.",
-      "features": ["6 Weekly Sessions", "Custom Dance Workouts", "Complete Nutrition Plan", "Video Support", "Movement Anatomy Lessons"]
+      "features": [
+        "6 Weekly Sessions",
+        "Custom Dance Workouts",
+        "Complete Nutrition Plan",
+        "Video Support",
+        "Movement Anatomy Lessons"
+      ]
     },
     "prPlan": {
       "title": "Premium Plan",
       "duration": "30 Days",
       "description": "A one-month complete transformation with direct guidance from Negin. Change your lifestyle from the ground up.",
-      "features": ["All VP Plan Features", "Weekly Online Session", "Complete 30-Day Program", "Form Correction"]
+      "features": [
+        "All VP Plan Features",
+        "Weekly Online Session",
+        "Complete 30-Day Program",
+        "Form Correction"
+      ]
     },
     "schedule": {
       "title": "Sample Weekly Workout Schedule",
@@ -82,13 +93,53 @@
       "reps": "Reps",
       "target": "Target Muscle",
       "rows": [
-        { "day": "Saturday", "exercise": "Lower Body", "sets": "6", "reps": "12-16", "muscle": "Glutes & Thighs" },
-        { "day": "Sunday", "exercise": "Dance Training", "sets": "4", "reps": "20 min", "muscle": "Full Body" },
-        { "day": "Monday", "exercise": "Upper Body", "sets": "5", "reps": "10-12", "muscle": "Shoulders & Back" },
-        { "day": "Tuesday", "exercise": "Cardio + Dance", "sets": "3", "reps": "30 min", "muscle": "Cardiovascular" },
-        { "day": "Wednesday", "exercise": "Lower Body", "sets": "6", "reps": "12-16", "muscle": "Calves & Thighs" },
-        { "day": "Thursday", "exercise": "Dance Training", "sets": "4", "reps": "25 min", "muscle": "Glutes & Abs" },
-        { "day": "Friday", "exercise": "Active Rest (Stretching & Yoga)", "isRest": true }
+        {
+          "day": "Saturday",
+          "exercise": "Lower Body",
+          "sets": "6",
+          "reps": "12-16",
+          "muscle": "Glutes & Thighs"
+        },
+        {
+          "day": "Sunday",
+          "exercise": "Dance Training",
+          "sets": "4",
+          "reps": "20 min",
+          "muscle": "Full Body"
+        },
+        {
+          "day": "Monday",
+          "exercise": "Upper Body",
+          "sets": "5",
+          "reps": "10-12",
+          "muscle": "Shoulders & Back"
+        },
+        {
+          "day": "Tuesday",
+          "exercise": "Cardio + Dance",
+          "sets": "3",
+          "reps": "30 min",
+          "muscle": "Cardiovascular"
+        },
+        {
+          "day": "Wednesday",
+          "exercise": "Lower Body",
+          "sets": "6",
+          "reps": "12-16",
+          "muscle": "Calves & Thighs"
+        },
+        {
+          "day": "Thursday",
+          "exercise": "Dance Training",
+          "sets": "4",
+          "reps": "25 min",
+          "muscle": "Glutes & Abs"
+        },
+        {
+          "day": "Friday",
+          "exercise": "Active Rest (Stretching & Yoga)",
+          "isRest": true
+        }
       ]
     },
     "anatomySection": {
@@ -98,16 +149,41 @@
       "tipTitle": "Negin's Tip",
       "tipDescription": "The muscular system of the leg and the skeletal system of the leg are closely connected. For effective calf training, first prepare the thigh muscles with 4 sets, then target the calves with 16-10 descending reps. Never do heavy squats without warming up the glutes.",
       "muscles": [
-        { "title": "Glutes", "description": "Gluteus Maximus — the most powerful muscle in the body", "moves": "6 Effective Moves", "imageName": "glute.jpg" },
-        { "title": "Thigh Muscles", "description": "Quadriceps & Hamstrings — the main drivers of movement", "moves": "8 Effective Moves", "imageName": "thigh.jpg" },
-        { "title": "Calf Muscles", "description": "Gastrocnemius & Soleus — balance and stability", "moves": "5 Effective Moves", "imageName": "calf.jpg" },
-        { "title": "Core Muscles", "description": "Abs & Back — the stability center of your body", "moves": "7 Effective Moves", "imageName": "core.jpg" }
+        {
+          "title": "Glutes",
+          "description": "Gluteus Maximus — the most powerful muscle in the body",
+          "moves": "6 Effective Moves",
+          "imageName": "glute.jpg"
+        },
+        {
+          "title": "Thigh Muscles",
+          "description": "Quadriceps & Hamstrings — the main drivers of movement",
+          "moves": "8 Effective Moves",
+          "imageName": "thigh.jpg"
+        },
+        {
+          "title": "Calf Muscles",
+          "description": "Gastrocnemius & Soleus — balance and stability",
+          "moves": "5 Effective Moves",
+          "imageName": "calf.jpg"
+        },
+        {
+          "title": "Core Muscles",
+          "description": "Abs & Back — the stability center of your body",
+          "moves": "7 Effective Moves",
+          "imageName": "core.jpg"
+        }
       ]
     },
     "results": {
       "sectionTitle": "RESULTS",
       "heading": "Numbers <span>Don't Lie</span>",
-      "labels": ["Satisfied Students", "Sessions Held", "Specialized Programs", "Years Experience"]
+      "labels": [
+        "Satisfied Students",
+        "Sessions Held",
+        "Specialized Programs",
+        "Years Experience"
+      ]
     },
     "testimonials": {
       "sectionTitle": "TESTIMONIALS",
@@ -140,9 +216,21 @@
     "phoneLabel": "Phone Number",
     "phonePlaceholder": "09121234567",
     "goalLabel": "Your Goal",
-    "goalOptions": ["Select...", "Weight Loss", "Muscle Building", "Body Shaping", "Dance Training", "General Fitness"],
+    "goalOptions": [
+      "Select...",
+      "Weight Loss",
+      "Muscle Building",
+      "Body Shaping",
+      "Dance Training",
+      "General Fitness"
+    ],
     "planLabel": "Choose Plan",
-    "planOptions": ["Select Plan", "FA Plan — 48 Hours", "VP Plan — 72 Hours", "Premium Plan — 30 Days"],
+    "planOptions": [
+      "Select Plan",
+      "FA Plan — 48 Hours",
+      "VP Plan — 72 Hours",
+      "Premium Plan — 30 Days"
+    ],
     "messageLabel": "More Details",
     "messagePlaceholder": "Current fitness level, physical limitations, time goals...",
     "submit": "Send Request"
@@ -152,13 +240,73 @@
     "description": "Fitness and dance coach. Personalized training programs with a scientific and artistic approach. Online and in-person.",
     "socialLabels": ["Instagram", "Telegram", "WhatsApp", "YouTube"],
     "quickAccess": "Quick Access",
-    "quickLinks": ["Services", "Plans", "Anatomy", "Results", "Contact", "Products"],
-    "quickHrefs": ["#services", "#plans", "#anatomy", "#results", "#contact", "/selling-package"],
+    "quickLinks": [
+      "Services",
+      "Plans",
+      "Anatomy",
+      "Results",
+      "Contact",
+      "Products"
+    ],
+    "quickHrefs": [
+      "#services",
+      "#plans",
+      "#anatomy",
+      "#results",
+      "#contact",
+      "/selling-package"
+    ],
     "contactHeading": "Contact Us",
     "phone": "0912-123-4567",
     "location": "Tehran, Iran",
     "copyright": "All rights reserved © 2025 Negin Safareh",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use"
+  },
+  "packages": {
+    "sectionTitle": "PRODUCTS",
+    "heading": "Choose Your <span>Package</span>",
+    "featuredBadge": "Best Seller",
+    "items": [
+      {
+        "title": "Online Coaching",
+        "price": "49 $",
+        "description": "Personalized workout plans & nutrition guidance.",
+        "features": [
+          "Weekly video calls",
+          "Custom meal plan",
+          "24/7 chat support"
+        ],
+        "cta": "Buy Now",
+        "image": "/images/online-coaching.jpg",
+        "featured": false
+      },
+      {
+        "title": "Dance Masterclass",
+        "price": "89 $",
+        "description": "Learn professional dance routines at home.",
+        "features": [
+          "10 pre-recorded sessions",
+          "Step-by-step breakdowns",
+          "Lifetime access"
+        ],
+        "cta": "Enroll Now",
+        "image": "/images/dance-masterclass.jpg",
+        "featured": true
+      },
+      {
+        "title": "Nutrition E-Book",
+        "price": "19 $",
+        "description": "150+ healthy recipes & macro guides.",
+        "features": [
+          "Instant PDF download",
+          "Vegan & gluten-free options",
+          "30-day meal planner"
+        ],
+        "cta": "Download",
+        "image": "/images/ebook.jpg",
+        "featured": false
+      }
+    ]
   }
 }

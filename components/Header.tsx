@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import HomeHeroContent from './HomeHeroContent'
-
+import HeroBlobs from '@/components/HeroBlobs'
 // Static gradient classes for each slide's accent color
 const gradients = [
   "from-violet-600 to-indigo-600",
@@ -83,9 +83,7 @@ const Header = () => {
       id="hero"
     >
       {/* Decorative blurred background blobs */}
-      <div className="hero-blob hero-blob-1" />
-      <div className="hero-blob hero-blob-2" />
-      <div className="hero-blob hero-blob-3" />
+      <HeroBlobs />
 
       {/* Particle canvas (placeholder for future canvas animation) */}
       <canvas id="particles-canvas" />

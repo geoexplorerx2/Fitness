@@ -4,20 +4,12 @@ import { routing } from '../../../i18n/routing'
 import Navbar from '@/components/Navbar'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-
-/**
- * Generate static pages for all configured locales at build time.
- * This enables fully static HTML export for each locale variant.
- */
+import PackageSection from '@/components/PackageSection'
+import HeroBlobs from '@/components/HeroBlobs'
 export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }))
 }
 
-/**
- * Home page — composes all landing page sections.
- * Each section is a client component that handles its own
- * translations via next-intl's useTranslations hook.
- */
 export default async function SellingPackage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params
     setRequestLocale(locale)
@@ -25,7 +17,8 @@ export default async function SellingPackage({ params }: { params: Promise<{ loc
     return (
         <main className="w-full min-h-screen relative">
             <Navbar />
-            <Header />
+            <HeroBlobs/>
+            <PackageSection />
             <Footer />
         </main>
     )
