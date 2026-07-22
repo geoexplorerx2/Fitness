@@ -6,7 +6,7 @@ import React from 'react'
 
 const page = () => {
     return (
-        <main className="w-full overflow-x-hidden min-h-screen relative">
+        <main className="w-full overflow-hidden min-h-screen relative">
             <Navbar />
             <HeroBlobs />
             <section className="relative py-20 md:py-28 px-4 sm:px-6">

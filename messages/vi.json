@@ -178,6 +178,18 @@
     "emailRequired": "Email là bắt buộc",
     "emailInvalid": "Vui lòng nhập email hợp lệ",
     "passwordRequired": "Mật khẩu là bắt buộc",
-    "passwordMin": "Mật khẩu phải có ít nhất 6 ký tự"
+    "passwordMin": "Mật khẩu phải có ít nhất 6 ký tự",
+    "fullNameLabel": "Họ và Tên",
+    "fullNamePlaceholder": "Họ và tên của bạn",
+    "confirmPasswordLabel": "Xác Nhận Mật Khẩu",
+    "confirmPasswordPlaceholder": "Xác nhận mật khẩu",
+    "signUp": "Đăng Ký",
+    "haveAccount": "Đã có tài khoản?",
+    "signInAlt": "Đăng Nhập",
+    "agreeToTerms": "Tôi đồng ý với Điều khoản & Chính sách",
+    "fullNameRequired": "Họ và tên là bắt buộc",
+    "confirmPasswordRequired": "Vui lòng xác nhận mật khẩu",
+    "passwordsMustMatch": "Mật khẩu không khớp",
+    "agreeRequired": "Bạn phải đồng ý với điều khoản"
   }
 }
