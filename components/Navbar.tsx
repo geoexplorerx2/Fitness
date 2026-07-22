@@ -61,7 +61,7 @@ export default function Navbar() {
     setMenuOpen(false)
   }
 
-  const handleMobileNavClick = (href: string) => {
+  const handleMobileNavClick = () => {
     setMenuOpen(false)
   }
 
@@ -140,7 +140,7 @@ export default function Navbar() {
           </div>
 
           {/* Brand logo */}
-          <a
+          <Link
             href="/"
             className="font-bold text-lg sm:text-xl tracking-tight flex items-center gap-2 shrink-0"
           >
@@ -152,7 +152,7 @@ export default function Navbar() {
               />
             </div>
             <span className="text-white truncate">{t('brandName')}</span>
-          </a>
+          </Link>
 
           {/* Hamburger — mobile only */}
           <button
@@ -211,7 +211,7 @@ export default function Navbar() {
                 <Link
                   key={i}
                   href={href}
-                  onClick={() => handleMobileNavClick(href)}
+                  onClick={handleMobileNavClick}
                   className="text-xl sm:text-2xl font-bold text-white/80 hover:text-white transition-colors"
                 >
                   {link}
