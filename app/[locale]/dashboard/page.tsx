@@ -11,7 +11,9 @@ const Dashboard = () => {
                     <div className='w-full h-full absolute z-0'>
                         <div className='w-full h-full relative'>
                             <div className='w-full lg:w-[calc(100%-400px)] h-full border-2 bg-[#214f21]'>
+                                <div className='w-full h-[70px] bg-[#51511a]'>
 
+                                </div>
                             </div>
                         </div>
                     </div>
