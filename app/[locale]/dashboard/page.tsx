@@ -1,6 +1,15 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react'
 import HeroBlobs from '@/components/HeroBlobs'
-const Dashboard = () => {
+import { useTranslations } from 'next-intl'
+export default function Dashboard({ params }: { params: Promise<{ locale: string }> }) {
+    const [openToggle, setOpenToggle] = useState<boolean>(false)
+    const t = useTranslations('footer')
+    useEffect(() => {
+        params.then(({ locale }) => console.log('locale:', locale))
+        console.log('t:', t)
+    }, [params])
+    
     return (
         <main className='w-full relative h-screen overflow-hidden'>
             <section className='w-full h-full absolute z-0'>
@@ -24,4 +33,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+
