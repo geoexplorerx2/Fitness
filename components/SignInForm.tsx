@@ -92,7 +92,7 @@ const SignInForm = () => {
                 transition={{ duration: 0.3 }}
                 className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/25 to-accent/5 border border-white/10 flex items-center justify-center"
               >
-                <FontAwesomeIcon icon={faLock} className="text-accent-light" style={{ width: 22, height: 22 }} />
+                <FontAwesomeIcon icon={faLock} style={{ width: 22, height: 22, color: 'white' }} />
               </motion.div>
             </div>
             <h1 className="text-center font-black text-2xl md:text-3xl tracking-tight mb-1 text-[var(--fg)]">
@@ -118,11 +118,10 @@ const SignInForm = () => {
                   value={email}
                   onChange={e => { setEmail(e.target.value); clearError('email') }}
                   placeholder={t('emailPlaceholder')}
-                  className={`${inputBaseClass} ${isRtl ? 'pr-10' : 'pl-10'} ${
-                    errors.email
+                  className={`${inputBaseClass} ${isRtl ? 'pr-10' : 'pl-10'} ${errors.email
                       ? 'border-red-500/60 focus:border-red-500 focus:ring-red-500/30'
                       : 'border-white/10 focus:border-accent focus:ring-accent/30'
-                  }`}
+                    }`}
                 />
               </div>
               <AnimatePresence mode="wait">
@@ -156,11 +155,10 @@ const SignInForm = () => {
                   value={password}
                   onChange={e => { setPassword(e.target.value); clearError('password') }}
                   placeholder={t('passwordPlaceholder')}
-                  className={`${inputBaseClass} ${isRtl ? 'pr-10 pl-10' : 'pl-10 pr-10'} ${
-                    errors.password
+                  className={`${inputBaseClass} ${isRtl ? 'pr-10 pl-10' : 'pl-10 pr-10'} ${errors.password
                       ? 'border-red-500/60 focus:border-red-500 focus:ring-red-500/30'
                       : 'border-white/10 focus:border-accent focus:ring-accent/30'
-                  }`}
+                    }`}
                 />
                 <button
                   type="button"

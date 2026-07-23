@@ -99,7 +99,7 @@ const SignUpForm = () => {
                 transition={{ duration: 0.3 }}
                 className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/25 to-accent/5 border border-white/10 flex items-center justify-center"
               >
-                <FontAwesomeIcon icon={faUser} className="text-accent-light" style={{ width: 22, height: 22 }} />
+                <FontAwesomeIcon icon={faUser} className="text-accent-light" style={{ width: 22, height: 22 , color:'white' }} />
               </motion.div>
             </div>
             <h1 className="text-center font-black text-2xl md:text-3xl tracking-tight mb-1 text-[var(--fg)]">
